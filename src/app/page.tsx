@@ -8,13 +8,12 @@ function getCurrentDate(){
   const monthName = currentDate.toLocaleString("en-US", options);
   const date = new Date().getDate() + ", " + monthName;
   return date;
-
 }
 
 export default function Home() {
 
   const date = getCurrentDate();
-  const [weatherData, setweatherData] = useState(null);
+  const [weatherData, setweatherData] = useState<any>(null);
   const [city, setcity] = useState("lahore");
 
   async function fecthData(cityName: string) {
@@ -55,8 +54,6 @@ export default function Home() {
     }
   }, []);
 
-  /*api code
-  a090c33bf3d644d20d420088dfdb6a22*/
  return (
     <main className={styles.man}> 
     <div className={styles.title}>
