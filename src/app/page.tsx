@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 function getCurrentDate(){
   const currentDate = new Date();
   const options = { month: "long" };
-  const monthName = currentDate.toLocaleString("en-US", options);
+  const monthName = currentDate.toLocaleString("en-US");
   const date = new Date().getDate() + ", " + monthName;
   return date;
 }
